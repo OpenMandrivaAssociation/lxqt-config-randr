@@ -1,6 +1,6 @@
 Name: lxqt-config-randr
 Version: 0.7.0
-Release: 2
+Release: 3
 Source0: http://lxqt.org/downloads/lxqt/%{version}/%{name}-%{version}.tar.xz
 Summary: RandR config module for LXQt
 URL: http://lxqt.org/
