@@ -19,6 +19,7 @@ BuildRequires: cmake(lxqt-qt5)
 BuildRequires: qt5-devel
 BuildRequires:	cmake(Qt5LinguistTools)
 BuildRequires:	cmake(Qt5X11Extras)
+BuildRequires:	pkgconfig(xrandr)
 
 %description
 RandR config module for LXQt
