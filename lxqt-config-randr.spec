@@ -9,6 +9,7 @@ Source0: %{name}-%{git}.tar.xz
 Release: 1
 Source0: http://lxqt.org/downloads/lxqt/%{version}/%{name}-%{version}.tar.xz
 %endif
+Patch0: lxqt-config-randr-20140803-no-qt4.patch
 Summary: RandR config module for LXQt
 URL: http://lxqt.org/
 License: GPL
@@ -28,6 +29,7 @@ RandR config module for LXQt
 %else
 %setup -q -c %{name}-%{version}
 %endif
+%apply_patches
 %cmake -DUSE_QT5:BOOL=ON
 
 %build

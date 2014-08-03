@@ -1,0 +1,13 @@
+--- lxqt-config-randr-20140803/src/CMakeLists.txt.omv~	2014-08-03 21:05:28.850560793 +0200
++++ lxqt-config-randr-20140803/src/CMakeLists.txt	2014-08-03 21:05:37.947292540 +0200
+@@ -6,9 +6,9 @@ if(USE_QT5)
+ else()
+   set(QTX_INCLUDE_DIRS ${QT_INCLUDE_DIR})
+   set(QTX_LIBRARIES ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY})
++  find_package(Qt4 COMPONENTS QtCore QtGui REQUIRED)
+ endif()
+ 
+-find_package(Qt4 COMPONENTS QtCore QtGui REQUIRED)
+ find_package(X11 REQUIRED)
+ 
+ include(CheckFunctionExists)
