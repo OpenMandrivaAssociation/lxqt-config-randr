@@ -6,7 +6,7 @@ Version: 0.8.0
 Release: 0.%git.1
 Source0: %{name}-%{git}.tar.xz
 %else
-Release: 3
+Release: 4
 Source0: http://lxqt.org/downloads/lxqt/%{version}/%{name}-%{version}.tar.xz
 %endif
 Patch0: lxqt-config-randr-20140803-no-qt4.patch
@@ -20,7 +20,6 @@ BuildRequires: qt5-devel
 BuildRequires: cmake(Qt5LinguistTools)
 BuildRequires: cmake(Qt5X11Extras)
 BuildRequires: pkgconfig(xrandr)
-BuildRequires: desktop-file-utils
 
 %description
 RandR config module for LXQt.
@@ -39,10 +38,6 @@ RandR config module for LXQt.
 
 %install
 %makeinstall_std -C build
-
-for desktop in %{buildroot}%{_sysconfdir}/xdg/autostart/*.desktop; do
-        desktop-file-edit --remove-only-show-in=LXQt --add-only-show-in=X-LXQt ${desktop}
-done
 
 
 %files
