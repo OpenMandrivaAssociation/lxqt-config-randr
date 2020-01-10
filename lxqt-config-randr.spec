@@ -30,7 +30,7 @@ RandR config module for LXQt.
 %else
 %setup -q -c %{name}-%{version}
 %endif
-%apply_patches
+%autopatch -p1
 %cmake -DUSE_QT5:BOOL=ON
 
 %build
