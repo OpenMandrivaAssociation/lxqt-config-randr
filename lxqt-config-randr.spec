@@ -11,7 +11,7 @@ Source0: http://lxqt.org/downloads/lxqt/%{version}/%{name}-%{version}.tar.xz
 %endif
 Patch0: lxqt-config-randr-20140803-no-qt4.patch
 Summary: RandR config module for LXQt
-URL: http://lxqt.org/
+URL: https://lxqt.org/
 License: GPL
 Group: Graphical desktop/KDE
 BuildRequires: cmake
